@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Same Same! — a quiet matching game for toddlers (Android)</title>
+<meta name="description" content="Find the two animals that are exactly alike. A wordless matching game for children from about one to five. No ads, no data collected, no internet permission.">
+<link rel="canonical" href="https://nikkittap.github.io/same-same-game/">
+<meta name="robots" content="index,follow">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Same Same! — a quiet matching game for toddlers">
+<meta property="og:description" content="Find the two animals that are exactly alike. Wordless, ad-free, and it collects nothing.">
+<meta property="og:url" content="https://nikkittap.github.io/same-same-game/">
+<meta property="og:site_name" content="Same Same!">
+<style>
+:root{
+  --bg:#0f1419; --panel:#161c24; --fg:#e6edf3; --muted:#9fb0c0;
+  --accent:#ffb35c; --accent-2:#5fd9a6; --border:#243040; --radius:14px;
+}
+*{box-sizing:border-box}
+body{margin:0; font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif; background:var(--bg); color:var(--fg); line-height:1.6}
+a{color:var(--accent); text-decoration:none}
+a:hover{text-decoration:underline}
+.wrap{max-width:880px; margin:0 auto; padding:0 20px}
+header{padding:64px 0 40px; text-align:center}
+.badge-pill{display:inline-block; font-size:13px; color:var(--accent-2); border:1px solid var(--border); border-radius:999px; padding:5px 14px; margin-bottom:22px; background:rgba(95,217,166,.07)}
+h1{font-size:2.1rem; line-height:1.25; margin:0 0 16px; letter-spacing:-.02em}
+h1 .grad{background:linear-gradient(90deg,var(--accent),var(--accent-2)); -webkit-background-clip:text; background-clip:text; color:transparent}
+.sub{font-size:1.15rem; color:var(--muted); max-width:640px; margin:0 auto 30px}
+.cta-row{display:flex; gap:14px; justify-content:center; flex-wrap:wrap; align-items:center}
+.ghost{display:inline-flex; align-items:center; gap:8px; padding:14px 22px; border:1px solid var(--border); border-radius:12px; color:var(--fg)}
+.ghost:hover{text-decoration:none; border-color:var(--accent)}
+section{padding:36px 0; border-top:1px solid var(--border)}
+h2{font-size:1.5rem; margin:0 0 18px; letter-spacing:-.01em}
+.grid{display:grid; grid-template-columns:repeat(2,1fr); gap:16px}
+.card{background:var(--panel); border:1px solid var(--border); border-radius:var(--radius); padding:20px}
+.card h3{margin:0 0 6px; font-size:1.05rem}
+.card p{margin:0; color:var(--muted); font-size:.96rem}
+footer{padding:40px 0 60px; text-align:center; color:var(--muted); font-size:.9rem; border-top:1px solid var(--border)}
+.priv{display:inline-flex; gap:8px; align-items:center; color:var(--accent-2); font-weight:600; margin-top:14px}
+@media(max-width:640px){ h1{font-size:1.7rem} .grid{grid-template-columns:1fr} }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap">
+    <span class="badge-pill">No words · no ads · nothing collected</span>
+    <h1>Find the two animals that are <span class="grad">exactly alike</span></h1>
+    <p class="sub">Same Same! is a quiet matching game for children from about one to five. Animals stand on the screen, two of them are the same — find them, and they wave and walk off.</p>
+    <div class="cta-row">
+      <a class="ghost" href="privacy/">Privacy policy</a>
+      <a class="ghost" href="mailto:nikitapetroff@gmail.com">Contact the developer</a>
+    </div>
+    <div><span class="priv">🔒 Nothing the child does leaves the device</span></div>
+  </div>
+</header>
+
+<main class="wrap">
+
+  <section>
+    <h2>What it is</h2>
+    <p>There is not a single word in the game — spoken or written. The player cannot read yet, and a voice would speak the wrong language anyway. Instead there are animals that answer to a touch, and a melody that climbs one step with every pair found, so a child hears how close the round is to its end without being able to count.</p>
+    <p>A pair is not simply "two of the same animal": it is two that match in everything at once — the animal, the hat, and what it holds. Later on, two identical kittens appear in different hats, and sameness has to be found in one detail rather than in the whole picture.</p>
+  </section>
+
+  <section>
+    <h2>How it is built</h2>
+    <div class="grid">
+      <div class="card"><h3>Difficulty adjusts itself</h3><p>One long ladder for the whole game. A clean round steps up, two hard ones in a row step back down. No level picker: a two-year-old will not choose, and a parent cannot guess.</p></div>
+      <div class="card"><h3>An album of animals</h3><p>Every animal found appears little by little in the album, where it can be looked at closely, listened to, and dressed in the same hats that tell pairs apart in the game.</p></div>
+      <div class="card"><h3>A parents' section</h3><p>Behind a simple addition problem: what to expect at which age, the research the game is based on, progress charts, language and sound.</p></div>
+      <div class="card"><h3>Private by design</h3><p>No ads, no analytics, no accounts, no internet permission. Everything the game remembers stays in its own folder on the device.</p></div>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <p>Same Same! · <a href="privacy/">Privacy</a> · <a href="mailto:nikitapetroff@gmail.com">nikitapetroff@gmail.com</a></p>
+    <p>© 2026 Nikita Petrov · not affiliated with Google.</p>
+  </div>
+</footer>
+
+</body>
+</html>
