@@ -4,14 +4,25 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Same Same! — a quiet matching game for toddlers (Android)</title>
-<meta name="description" content="Find the two animals that are exactly alike. A wordless matching game for children from about one to five. No ads, no data collected, no internet permission.">
+<meta name="description" content="A calm matching game for little children. Find two animals that are exactly alike, collect them in an album, and progress at your own pace — with no ads, accounts or tracking.">
 <link rel="canonical" href="https://nikkittap.github.io/same-same-game/">
 <meta name="robots" content="index,follow">
+<link rel="icon" href="img/favicon-32.png" sizes="32x32" type="image/png">
+<link rel="icon" href="img/favicon-512.png" sizes="512x512" type="image/png">
+<link rel="apple-touch-icon" href="img/favicon-180.png">
 <meta property="og:type" content="website">
 <meta property="og:title" content="Same Same! — a quiet matching game for toddlers">
 <meta property="og:description" content="Find the two animals that are exactly alike. Wordless, ad-free, and it collects nothing.">
 <meta property="og:url" content="https://nikkittap.github.io/same-same-game/">
 <meta property="og:site_name" content="Same Same!">
+<meta property="og:image" content="https://nikkittap.github.io/same-same-game/img/feature_big.jpg">
+<meta property="og:image:width" content="1794">
+<meta property="og:image:height" content="876">
+<meta property="og:image:alt" content="Same Same! animals in a paper-collage little town">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Same Same! — a quiet matching game for toddlers">
+<meta name="twitter:description" content="Find the two animals that are exactly alike. Wordless, ad-free, and it collects nothing.">
+<meta name="twitter:image" content="https://nikkittap.github.io/same-same-game/img/feature_big.jpg">
 <style>
 :root{
   --bg:#0f1419; --panel:#161c24; --fg:#e6edf3; --muted:#9fb0c0;
@@ -22,6 +33,7 @@ body{margin:0; font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,He
 a{color:var(--accent); text-decoration:none}
 a:hover{text-decoration:underline}
 .wrap{max-width:880px; margin:0 auto; padding:0 20px}
+.wrap-wide{max-width:1040px; margin:0 auto; padding:0 20px}
 header{padding:64px 0 40px; text-align:center}
 .badge-pill{display:inline-block; font-size:13px; color:var(--accent-2); border:1px solid var(--border); border-radius:999px; padding:5px 14px; margin-bottom:22px; background:rgba(95,217,166,.07)}
 h1{font-size:2.1rem; line-height:1.25; margin:0 0 16px; letter-spacing:-.02em}
@@ -30,25 +42,54 @@ h1 .grad{background:linear-gradient(90deg,var(--accent),var(--accent-2)); -webki
 .cta-row{display:flex; gap:14px; justify-content:center; flex-wrap:wrap; align-items:center}
 .ghost{display:inline-flex; align-items:center; gap:8px; padding:14px 22px; border:1px solid var(--border); border-radius:12px; color:var(--fg)}
 .ghost:hover{text-decoration:none; border-color:var(--accent)}
+.ghost.accent{border-color:var(--accent); color:var(--accent)}
 section{padding:36px 0; border-top:1px solid var(--border)}
 h2{font-size:1.5rem; margin:0 0 18px; letter-spacing:-.01em}
 .grid{display:grid; grid-template-columns:repeat(2,1fr); gap:16px}
 .card{background:var(--panel); border:1px solid var(--border); border-radius:var(--radius); padding:20px}
 .card h3{margin:0 0 6px; font-size:1.05rem}
 .card p{margin:0; color:var(--muted); font-size:.96rem}
+.hero-art{margin:8px 0 0}
+.hero-art picture{display:block}
+.hero-art img{width:100%; height:auto; display:block; border-radius:var(--radius); box-shadow:0 18px 44px rgba(0,0,0,.4)}
+.section-lede{color:var(--muted); font-size:1.02rem; max-width:640px; margin:0 0 26px}
+.shots{display:grid; grid-template-columns:repeat(2,1fr); gap:18px}
+.shot{background:var(--panel); border:1px solid var(--border); border-radius:var(--radius); overflow:hidden}
+.shot picture{display:block}
+.shot img{display:block; width:100%; height:auto; aspect-ratio:1400/788}
+.shot figcaption{margin:0; padding:12px 18px 16px; font-size:.95rem; color:var(--muted); text-align:center}
+.credit{text-align:center}
+.credit p{max-width:520px; margin:0 auto 20px; color:var(--muted)}
+.credit strong{color:var(--fg)}
 footer{padding:40px 0 60px; text-align:center; color:var(--muted); font-size:.9rem; border-top:1px solid var(--border)}
 .priv{display:inline-flex; gap:8px; align-items:center; color:var(--accent-2); font-weight:600; margin-top:14px}
-@media(max-width:640px){ h1{font-size:1.7rem} .grid{grid-template-columns:1fr} }
+.credit-line{margin-top:6px}
+@media(max-width:640px){
+  h1{font-size:1.7rem}
+  .grid{grid-template-columns:1fr}
+  .shots{grid-template-columns:1fr}
+}
 </style>
 </head>
 <body>
 
 <header>
   <div class="wrap">
-    <span class="badge-pill">No words · no ads · nothing collected</span>
+    <span class="badge-pill">No words in play · no ads · nothing collected</span>
     <h1>Find the two animals that are <span class="grad">exactly alike</span></h1>
     <p class="sub">Same Same! is a quiet matching game for children from about one to five. Animals stand on the screen, two of them are the same — find them, and they wave and walk off.</p>
-    <div class="cta-row">
+
+    <div class="hero-art wrap-wide" style="padding:0">
+      <picture>
+        <source srcset="img/feature_big.webp" type="image/webp">
+        <img src="img/feature_big.jpg" width="1794" height="876"
+             alt="Same Same! animals in a paper-collage little town">
+      </picture>
+    </div>
+
+    <div class="cta-row" style="margin-top:30px">
+      <!-- TODO(play-store): once the Google Play listing is public, add
+           <a class="ghost accent" href="PLAY_STORE_URL">Get it on Google Play</a> here. -->
       <a class="ghost" href="privacy/">Privacy policy</a>
       <a class="ghost" href="mailto:nikitapetrovapps@gmail.com">Contact the developer</a>
     </div>
@@ -56,29 +97,112 @@ footer{padding:40px 0 60px; text-align:center; color:var(--muted); font-size:.9r
   </div>
 </header>
 
-<main class="wrap">
+<main>
+
+  <div class="wrap">
+    <section>
+      <h2>What it is</h2>
+      <p>The child-facing play area uses no spoken or written instructions. Everything is communicated through characters, animation and sound. The player cannot read yet, and a voice would speak the wrong language anyway. Instead there are animals that answer to a touch, and a melody that climbs one step with every pair found, so a child hears how close the round is to its end without being able to count.</p>
+      <p>A pair is not simply "two of the same animal": it is two that match in everything at once — the animal, the hat, and what it holds. Later on, two identical kittens appear in different hats, and sameness has to be found in one detail rather than in the whole picture.</p>
+    </section>
+  </div>
 
   <section>
-    <h2>What it is</h2>
-    <p>There is not a single word in the game — spoken or written. The player cannot read yet, and a voice would speak the wrong language anyway. Instead there are animals that answer to a touch, and a melody that climbs one step with every pair found, so a child hears how close the round is to its end without being able to count.</p>
-    <p>A pair is not simply "two of the same animal": it is two that match in everything at once — the animal, the hat, and what it holds. Later on, two identical kittens appear in different hats, and sameness has to be found in one detail rather than in the whole picture.</p>
-  </section>
-
-  <section>
-    <h2>How it is built</h2>
-    <div class="grid">
-      <div class="card"><h3>Difficulty adjusts itself</h3><p>One long ladder for the whole game. A clean round steps up, two hard ones in a row step back down. No level picker: a two-year-old will not choose, and a parent cannot guess.</p></div>
-      <div class="card"><h3>An album of animals</h3><p>Every animal found appears little by little in the album, where it can be looked at closely, listened to, and dressed in the same hats that tell pairs apart in the game.</p></div>
-      <div class="card"><h3>A parents' section</h3><p>Behind a simple addition problem: what to expect at which age, the research the game is based on, progress charts, language and sound.</p></div>
-      <div class="card"><h3>Private by design</h3><p>No ads, no analytics, no accounts, no internet permission. Everything the game remembers stays in its own folder on the device.</p></div>
+    <div class="wrap-wide">
+      <h2>See it in action</h2>
+      <p class="section-lede">Real screens from the game, in the order a round actually grows: easier first, then harder, then the parts a child keeps coming back to.</p>
+      <div class="shots">
+        <figure class="shot">
+          <picture>
+            <source srcset="img/01_pair.webp" type="image/webp">
+            <img src="img/01_pair.jpg" width="1400" height="788" loading="lazy"
+                 alt="Matching two identical frogs in Same Same!">
+          </picture>
+          <figcaption>Find the two that are exactly alike</figcaption>
+        </figure>
+        <figure class="shot">
+          <picture>
+            <source srcset="img/02_hats.webp" type="image/webp">
+            <img src="img/02_hats.jpg" width="1400" height="788" loading="lazy"
+                 alt="Matching foxes and ducks by their hats">
+          </picture>
+          <figcaption>Same animal. Same hat.</figcaption>
+        </figure>
+        <figure class="shot">
+          <picture>
+            <source srcset="img/03_items.webp" type="image/webp">
+            <img src="img/03_items.jpg" width="1400" height="788" loading="lazy"
+                 alt="Matching animals by hats and held objects">
+          </picture>
+          <figcaption>Then match what they hold, too</figcaption>
+        </figure>
+        <figure class="shot">
+          <picture>
+            <source srcset="img/04_album.webp" type="image/webp">
+            <img src="img/04_album.jpg" width="1400" height="788" loading="lazy"
+                 alt="Animal collection album in Same Same!">
+          </picture>
+          <figcaption>Collect every animal</figcaption>
+        </figure>
+        <figure class="shot">
+          <picture>
+            <source srcset="img/05_dressup.webp" type="image/webp">
+            <img src="img/05_dressup.jpg" width="1400" height="788" loading="lazy"
+                 alt="Fox dress-up screen with hats and objects">
+          </picture>
+          <figcaption>Look closer, listen and dress them up</figcaption>
+        </figure>
+        <figure class="shot">
+          <picture>
+            <source srcset="img/06_parents.webp" type="image/webp">
+            <img src="img/06_parents.jpg" width="1400" height="788" loading="lazy"
+                 alt="Parent progress and guidance screen in Same Same!">
+          </picture>
+          <figcaption>A separate area for parents</figcaption>
+        </figure>
+      </div>
     </div>
   </section>
+
+  <div class="wrap">
+    <section>
+      <h2>How it is built</h2>
+      <div class="grid">
+        <div class="card"><h3>Difficulty adjusts itself</h3><p>One long ladder for the whole game. A clean round steps up, two hard ones in a row step back down. No level picker: a two-year-old will not choose, and a parent cannot guess.</p></div>
+        <div class="card"><h3>An album of animals</h3><p>Every animal found appears little by little in the album, where it can be looked at closely, listened to, and dressed in the same hats that tell pairs apart in the game.</p></div>
+        <div class="card"><h3>A parents' section</h3><p>Behind a simple addition problem: what to expect at which age, the research the game is based on, progress charts, language and sound.</p></div>
+        <div class="card"><h3>Private by design</h3><p>No ads, no analytics, no accounts, no internet permission. Everything the game remembers stays in its own folder on the device.</p></div>
+      </div>
+    </section>
+
+    <section class="credit">
+      <h2>Made by a small family team</h2>
+      <p>Same Same! is designed and developed by <strong>Nikita Petrov</strong>.<br>
+      Visual development and final art refinement by illustrator <strong><a href="https://katiaoskina.com/" target="_blank" rel="noopener noreferrer">Katia Oskina</a></strong>.</p>
+      <div class="cta-row">
+        <a class="ghost" href="https://katiaoskina.com/" target="_blank" rel="noopener noreferrer">See Katia's illustration portfolio ↗</a>
+      </div>
+    </section>
+
+    <section>
+      <h2>Get it</h2>
+      <div class="cta-row">
+        <!-- TODO(play-store): once the Google Play listing is public, add
+             <a class="ghost accent" href="PLAY_STORE_URL">Get it on Google Play</a> here.
+             App Store button goes next to it when that release ships — no
+             "Coming soon" placeholder, just add the button when it's real. -->
+        <a class="ghost" href="privacy/">Privacy policy</a>
+        <a class="ghost" href="mailto:nikitapetrovapps@gmail.com">Contact the developer</a>
+      </div>
+    </section>
+  </div>
 
 </main>
 
 <footer>
   <div class="wrap">
     <p>Same Same! · <a href="privacy/">Privacy</a> · <a href="mailto:nikitapetrovapps@gmail.com">nikitapetrovapps@gmail.com</a></p>
+    <p class="credit-line">Visual development &amp; art refinement — <a href="https://katiaoskina.com/" target="_blank" rel="noopener noreferrer">Katia Oskina</a></p>
     <p>© 2026 Nikita Petrov Apps · not affiliated with Google.</p>
   </div>
 </footer>
