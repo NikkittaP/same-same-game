@@ -52,11 +52,12 @@ footer p{margin:.25rem 0}
   <div class="site"><strong><a href="../">Same Same!</a></strong> — a matching game for toddlers, for Android.</div>
 
   <h1>Privacy Policy — Same Same!</h1>
-  <p class="updated"><strong>Last updated:</strong> 2026-09-03<br>
+  <p class="updated"><strong>Last updated:</strong> 2026-09-27<br>
   Applies to the Android app <code>com.nikitapetrovapps.samesame</code>.</p>
 
   <h2>Summary</h2>
-  <p>Same Same! collects no data at all. It does not transmit anything, shows no advertising, contains no analytics and asks for no account. The app does not even hold the Android <code>INTERNET</code> permission, so there is nowhere for data to go. Everything the game remembers stays in its own private folder on the device.</p>
+  <p>Same Same! collects no data at all. The developer runs no servers, and the game sends nothing to anyone: it shows no advertising, contains no analytics and asks for no account. Everything the game remembers stays in its own private folder on the device.</p>
+  <p>The app plays fully offline. It holds the Android <code>INTERNET</code> permission for one reason only: Google Play needs the network to process the one-time in-app purchase and to offer app updates. Both go through the Google Play app on the device, not through the developer (see <a href="#purchases">Purchases and updates</a>).</p>
 
   <h2>What the game stores on the device</h2>
   <ul>
@@ -64,7 +65,8 @@ footer p{margin:.25rem 0}
     <li>how many pairs have been found with each animal — this is what fills the album;</li>
     <li>how the child dressed the animals in the album;</li>
     <li>counters of rounds, missed taps and playing time per day, used to draw the chart in the parents' menu;</li>
-    <li>the interface language and whether sound is on.</li>
+    <li>the interface language, whether sound is on, and the age setting that adjusts how forgiving taps are;</li>
+    <li>whether the full version is unlocked on this device, and which offered app update an adult has chosen to skip.</li>
   </ul>
   <p>These records contain no name, age, photo, voice, location or device identifier — nothing that points at a person. They are removed together with the app, and also by <em>Start over</em> in the parents' menu.</p>
 
@@ -74,29 +76,30 @@ footer p{margin:.25rem 0}
     <li>No accounts, no sign-in, no cloud saves.</li>
     <li>No analytics, telemetry, trackers or advertising IDs.</li>
     <li>No advertising and no ad networks.</li>
-    <li>No third-party SDKs that collect data, and no data sharing — there is no data to share.</li>
+    <li>No third-party SDKs that collect data, and no data sharing — there is no data to share. The only libraries that talk to anything outside the app are Google's own Play Billing and Play in-app updates libraries, and they talk only to the Google Play app on the device.</li>
     <li>No chat, comments, user-generated content or any other communication between people.</li>
   </ul>
 
   <h2>Permissions</h2>
-  <p>The app requests no Android runtime permissions — no camera, microphone, location, contacts or file access — and the released build ships without the <code>INTERNET</code> permission.</p>
+  <p>The app requests no Android runtime permissions — no camera, microphone, location, contacts or file access. It declares three install-time permissions that are needed only by Google Play: <code>INTERNET</code> and <code>ACCESS_NETWORK_STATE</code> (so Google Play can reach its servers for a purchase or an update check) and <code>com.android.vending.BILLING</code> (so the game can ask Google Play whether the full version is owned). The game itself opens no network connections of its own.</p>
 
   <h2>Links out of the app</h2>
   <p>The parents' menu — reached only after solving a simple addition problem, so a child does not open it by accident — has a page listing the research the game is built on, and a short About &amp; Credits page naming the illustrator who worked on some of the game's artwork. Tapping a source or the illustrator's portfolio link opens that website in the device browser, the same way both times. Those websites are run by other people and have their own privacy policies.</p>
   <p>Apart from those two pages, the game contains no outbound links, and there are none anywhere in the part of the game a child plays.</p>
 
   <h2>Children</h2>
-  <p>The game is made for children roughly between one and five years old. It is designed to meet the Google Play Families policy, the Children's Online Privacy Protection Act (COPPA) and the GDPR rules on children's data. Since nothing is collected, transmitted or stored outside the device, there is no personal data of a child to protect, disclose or delete on request.</p>
-  <p>The only place the game speaks to an adult is the parents' menu behind the addition gate, and nothing from there leaves the device.</p>
+  <p>The game is made for children roughly between one and five years old. It is designed to meet the Google Play Families policy, the Children's Online Privacy Protection Act (COPPA) and the GDPR rules on children's data. Since the game collects nothing and stores nothing outside the device, there is no personal data of a child to protect, disclose or delete on request.</p>
+  <p>The game speaks to an adult in the parents' menu behind the addition gate, and nothing from there leaves the device. The purchase is offered only there: a child playing rounds or browsing the album never sees an offer to buy anything.</p>
 
-  <h2>Purchases</h2>
-  <p>As of this revision the app contains no in-app purchases. If a purchase is added later, the payment is handled entirely by Google Play: the developer neither receives nor stores card numbers, billing addresses or any other payment details, and only learns whether this installation owns the item. This page will be updated before any purchase ships.</p>
+  <h2 id="purchases">Purchases and updates</h2>
+  <p>The little town world is free and complete. The other worlds are unlocked by a single one-time in-app purchase, the full version, with no subscription. The payment is handled entirely by Google Play under <a href="https://policies.google.com/privacy">Google's privacy policy</a>: the developer neither receives nor stores card numbers, billing addresses, the Google account or any other payment details. The game only asks Google Play whether this account owns the full version and remembers the answer on the device.</p>
+  <p>When the app starts, it asks Google Play whether a newer version is available. If there is one, a small note offers to update; it can be dismissed, and a dismissed version is not offered again. That check is carried out by Google Play on the device, and nothing about the child or how they play is part of it.</p>
 
   <h2>Google Play Data safety, in plain words</h2>
   <table>
     <tr><th>Data collected</th><td>None.</td></tr>
     <tr><th>Data shared with third parties</th><td>None.</td></tr>
-    <tr><th>Data encrypted in transit</th><td>Not applicable — nothing is transmitted.</td></tr>
+    <tr><th>Data encrypted in transit</th><td>Not applicable — the game transmits nothing. Purchases and update checks are carried out by Google Play over its own encrypted connection.</td></tr>
     <tr><th>Deletion request</th><td>Not applicable — uninstalling the app, or <em>Start over</em> in the parents' menu, removes everything the game has ever written.</td></tr>
   </table>
 

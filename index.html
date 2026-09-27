@@ -88,12 +88,12 @@ footer{padding:40px 0 60px; text-align:center; color:var(--muted); font-size:.9r
     </div>
 
     <div class="cta-row" style="margin-top:30px">
-      <!-- TODO(play-store): once the Google Play listing is public, add
-           <a class="ghost accent" href="PLAY_STORE_URL">Get it on Google Play</a> here. -->
+      <a class="ghost accent" href="https://play.google.com/store/apps/details?id=com.nikitapetrovapps.samesame">Get it on Google Play</a>
       <a class="ghost" href="privacy/">Privacy policy</a>
       <a class="ghost" href="mailto:nikitapetrovapps@gmail.com">Contact the developer</a>
     </div>
     <div><span class="priv">🔒 Nothing the child does leaves the device</span></div>
+    <div style="margin-top:10px"><span class="priv" style="color:var(--muted); font-weight:400">Currently in closed testing — the link works once you've joined as a tester</span></div>
   </div>
 </header>
 
@@ -110,55 +110,63 @@ footer{padding:40px 0 60px; text-align:center; color:var(--muted); font-size:.9r
   <section>
     <div class="wrap-wide">
       <h2>See it in action</h2>
-      <p class="section-lede">Real screens from the game, in the order a round actually grows: easier first, then harder, then the parts a child keeps coming back to.</p>
+      <p class="section-lede">The same frames as on Google Play, built from real screens of the game: easier rounds first, then harder ones, then the parts a child keeps coming back to.</p>
       <div class="shots">
         <figure class="shot">
           <picture>
-            <source srcset="img/01_pair.webp" type="image/webp">
-            <img src="img/01_pair.jpg" width="1400" height="788" loading="lazy"
-                 alt="Matching two identical frogs in Same Same!">
+            <source srcset="img/shot_01_pair.webp" type="image/webp">
+            <img src="img/shot_01_pair.jpg" width="1400" height="788" loading="lazy"
+                 alt="Two identical hedgehogs among rabbits in the little town — find the two that match">
           </picture>
-          <figcaption>Find the two that are exactly alike</figcaption>
         </figure>
         <figure class="shot">
           <picture>
-            <source srcset="img/02_hats.webp" type="image/webp">
-            <img src="img/02_hats.jpg" width="1400" height="788" loading="lazy"
-                 alt="Matching foxes and ducks by their hats">
+            <source srcset="img/shot_02_science.webp" type="image/webp">
+            <img src="img/shot_02_science.jpg" width="1400" height="788" loading="lazy"
+                 alt="The in-app page listing the research the game draws on">
           </picture>
-          <figcaption>Same animal. Same hat.</figcaption>
         </figure>
         <figure class="shot">
           <picture>
-            <source srcset="img/03_items.webp" type="image/webp">
-            <img src="img/03_items.jpg" width="1400" height="788" loading="lazy"
-                 alt="Matching animals by hats and held objects">
+            <source srcset="img/shot_03_hats.webp" type="image/webp">
+            <img src="img/shot_03_hats.jpg" width="1400" height="788" loading="lazy"
+                 alt="Hedgehogs and mice in different hats — first animals, then hats">
           </picture>
-          <figcaption>Then match what they hold, too</figcaption>
         </figure>
         <figure class="shot">
           <picture>
-            <source srcset="img/04_album.webp" type="image/webp">
-            <img src="img/04_album.jpg" width="1400" height="788" loading="lazy"
-                 alt="Animal collection album in Same Same!">
+            <source srcset="img/shot_04_items.webp" type="image/webp">
+            <img src="img/shot_04_items.jpg" width="1400" height="788" loading="lazy"
+                 alt="Bears and frogs with hats and balloons — difficulty adjusts itself over 41 steps">
           </picture>
-          <figcaption>Collect every animal</figcaption>
         </figure>
         <figure class="shot">
           <picture>
-            <source srcset="img/05_dressup.webp" type="image/webp">
-            <img src="img/05_dressup.jpg" width="1400" height="788" loading="lazy"
-                 alt="Fox dress-up screen with hats and objects">
+            <source srcset="img/shot_05_worlds.webp" type="image/webp">
+            <img src="img/shot_05_worlds.jpg" width="1400" height="788" loading="lazy"
+                 alt="The farm and the seabed side by side — three worlds, 27 animals">
           </picture>
-          <figcaption>Look closer, listen and dress them up</figcaption>
         </figure>
         <figure class="shot">
           <picture>
-            <source srcset="img/06_parents.webp" type="image/webp">
-            <img src="img/06_parents.jpg" width="1400" height="788" loading="lazy"
-                 alt="Parent progress and guidance screen in Same Same!">
+            <source srcset="img/shot_06_album.webp" type="image/webp">
+            <img src="img/shot_06_album.jpg" width="1400" height="788" loading="lazy"
+                 alt="The album of the little town, half collected">
           </picture>
-          <figcaption>A separate area for parents</figcaption>
+        </figure>
+        <figure class="shot">
+          <picture>
+            <source srcset="img/shot_07_dressup.webp" type="image/webp">
+            <img src="img/shot_07_dressup.jpg" width="1400" height="788" loading="lazy"
+                 alt="The fox in the album, dressed in a blue hat and holding a balloon">
+          </picture>
+        </figure>
+        <figure class="shot">
+          <picture>
+            <source srcset="img/shot_08_parents.webp" type="image/webp">
+            <img src="img/shot_08_parents.jpg" width="1400" height="788" loading="lazy"
+                 alt="The parents' progress page: how each feature is going">
+          </picture>
         </figure>
       </div>
     </div>
@@ -168,10 +176,12 @@ footer{padding:40px 0 60px; text-align:center; color:var(--muted); font-size:.9r
     <section>
       <h2>How it is built</h2>
       <div class="grid">
-        <div class="card"><h3>Difficulty adjusts itself</h3><p>One long ladder for the whole game. A clean round steps up, two hard ones in a row step back down. No level picker: a two-year-old will not choose, and a parent cannot guess.</p></div>
+        <div class="card"><h3>Difficulty adjusts itself</h3><p>One long ladder for the whole game. Clean rounds step up, two hard ones in a row step back down. No level picker: a two-year-old will not choose, and a parent cannot guess.</p></div>
         <div class="card"><h3>An album of animals</h3><p>Every animal found appears little by little in the album, where it can be looked at closely, listened to, and dressed in the same hats that tell pairs apart in the game.</p></div>
         <div class="card"><h3>A parents' section</h3><p>Behind a simple addition problem: what to expect at which age, the research the game is based on, progress charts, language and sound.</p></div>
-        <div class="card"><h3>Private by design</h3><p>No ads, no analytics, no accounts, no internet permission. Everything the game remembers stays in its own folder on the device.</p></div>
+        <div class="card"><h3>Private by design</h3><p>No ads, no analytics, no accounts. The game plays offline and sends nothing anywhere; everything it remembers stays in its own folder on the device.</p></div>
+        <div class="card"><h3>Free to start</h3><p>The little town with its nine animals is free and complete. One purchase, no subscription, opens the farm and the seabed — and every world added later.</p></div>
+        <div class="card"><h3>Made for small hands</h3><p>An age setting in the parents' section decides how forgiving a tap is, so the youngest do not have to hit an animal exactly.</p></div>
       </div>
     </section>
 
@@ -187,10 +197,10 @@ footer{padding:40px 0 60px; text-align:center; color:var(--muted); font-size:.9r
     <section>
       <h2>Get it</h2>
       <div class="cta-row">
-        <!-- TODO(play-store): once the Google Play listing is public, add
-             <a class="ghost accent" href="PLAY_STORE_URL">Get it on Google Play</a> here.
-             App Store button goes next to it when that release ships — no
-             "Coming soon" placeholder, just add the button when it's real. -->
+        <!-- TODO(play-store): App Store button goes next to it when that
+             release ships — no "Coming soon" placeholder, just add the
+             button when it's real. -->
+        <a class="ghost accent" href="https://play.google.com/store/apps/details?id=com.nikitapetrovapps.samesame">Get it on Google Play</a>
         <a class="ghost" href="privacy/">Privacy policy</a>
         <a class="ghost" href="mailto:nikitapetrovapps@gmail.com">Contact the developer</a>
       </div>
